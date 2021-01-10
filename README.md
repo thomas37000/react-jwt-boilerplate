@@ -1,4 +1,4 @@
-Télécharge ce _boilerplate_ afin de démarrer le tutoriel : [https://github.com/bastienwcs/react-jwt-boilerplate](https://github.com/bastienwcs/react-jwt-boilerplate).
+_Fork_ ce _boilerplate_ afin de démarrer le tutoriel : [https://github.com/bastienwcs/react-jwt-boilerplate](https://github.com/bastienwcs/react-jwt-boilerplate).
 
 ![Structure](pictures/1-structure.png)
 
