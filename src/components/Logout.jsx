@@ -2,8 +2,7 @@ import React from "react";
 
 const Logout = () => {
   const handleSubmit = () => {
-    localStorage.removeItem("TOKEN");
-    alert("Disconnected successfully");
+    // Your code here
   };
 
   return (
