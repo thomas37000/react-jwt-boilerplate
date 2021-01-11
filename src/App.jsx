@@ -1,27 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Users from "./components/Users";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
+import NavBar from "./components/Nav";
+import Account from "./components/Form";
 
 function App() {
   return (
     <Router>
       <div className="app">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-            <li>
-              <Link to="/logout">Disconnect</Link>
-            </li>
-          </ul>
-        </nav>
-
+        <NavBar />
         <Switch>
           <Route exact path="/login">
             <Login />
@@ -31,6 +20,9 @@ function App() {
           </Route>
           <Route exact path="/logout">
             <Logout />
+          </Route>
+          <Route exact path="/account">
+            <Account />
           </Route>
         </Switch>
       </div>

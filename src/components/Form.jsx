@@ -1,34 +1,36 @@
 import React, { useState } from "react";
-import axios from "axios";
 
-const Login = () => {
+const Account = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleSubmit = () => {
-    const { REACT_APP_SERVER_ADDRESS } = process.env;
-    if (email && password) {
-      axios
-        .post(`${REACT_APP_SERVER_ADDRESS}/login/`, {
-          email,
-          password,
-        })
-        .then((res) => res.data)
-        .then((data) => {
-          localStorage.setItem("TOKEN", data.token);
-          alert("Logged successfully");
-        })
-        .catch((err) => {
-          alert(err.response.data.errorMessage);
-        });
-    } else {
-      alert("Please specify both email and password");
-    }
-  };
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
 
   return (
     <div className="main">
       <form>
+        {/* <label htmlFor="firstname">
+        Firstname:
+        <input
+          type="text"
+          name="firstname"
+          id="firstName"
+          placeholder="firstname"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+        />
+      </label>
+      <label htmlFor="lastname">
+        Lastname:
+        <input
+          type="text"
+          name="lastname"
+          id="lastName"
+          placeholder="lastName"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+        />
+      </label> */}
         <label htmlFor="email">
           Email:
           <input
@@ -53,12 +55,10 @@ const Login = () => {
           />
         </label>
         <br />
-        <button type="button" onClick={handleSubmit}>
-          Login
-        </button>
+        <button type="button">valid</button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default Account;

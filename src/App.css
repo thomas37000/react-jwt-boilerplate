@@ -1,0 +1,38 @@
+.main {
+  text-align: center;
+}
+
+.main ul{
+  list-style-type: none;
+}
+
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: lightgray;
+  list-style-type: none;
+  padding: 10px;
+  width: 100vw;
+  height: 10vh;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+button {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: yellow;
+ border: none;
+}
+
+input {
+  margin-bottom: 1em;
+  width: 10%;
+  padding: 0.25rem;
+  border-radius: 3px;
+}
